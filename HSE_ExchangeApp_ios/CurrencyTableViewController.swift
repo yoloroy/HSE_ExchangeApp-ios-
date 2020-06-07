@@ -26,6 +26,7 @@ class CurrencyTableViewController: UITableViewController {
             fatalError("The dequeued cell is not an instance of CurrencyTableViewCell.")
         }
         
+        // for feature know who is it
         cell.tag = indexPath.row
         cell.setData(newData: items[indexPath.row])
         
@@ -35,12 +36,14 @@ class CurrencyTableViewController: UITableViewController {
     private func loadDefaults() {
         let url = URL(string: "https://api.exchangeratesapi.io/latest")!
         
+        // request for currency rates
         let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
             DispatchQueue.main.async {
                 do {
                     if let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any] {
+                        // saving result
                         self.convertValues = (json["rates"] as! [String: Double])
-                        self.convertValues["EUR"] = 1.0
+                        self.convertValues["EUR"] = 1.0  // standart base currency
                     }
                 } catch let error as NSError {
                     print("Failed to load: \(error.localizedDescription)")
@@ -72,10 +75,13 @@ class CurrencyTableViewController: UITableViewController {
         items[senderRow].value = sender.text!.toDouble()
         
         for row in 0...items.count-1 {
+            // for saving selection
             if row == senderRow {continue}
             
+            // calculate value from rates
             items[row].value = items[senderRow].value / convertValues[items[senderRow].kind]! * convertValues[items[row].kind]!
             
+            // view values
             (tableView.visibleCells[row] as! CurrencyTableViewCell)
                 .value = items[row].value
         }
