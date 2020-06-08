@@ -12,10 +12,10 @@
 - Есть тёмная тема
 
 ## Скриншоты работы приложения
-![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/main1)
-![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/main2)
-![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/search1)
-![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/search2)
+![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/main1.png)
+![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/main2.png)
+![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/search1.png)
+![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/search2.png)
 
 <br><br><br>
 ## Мои контакты
