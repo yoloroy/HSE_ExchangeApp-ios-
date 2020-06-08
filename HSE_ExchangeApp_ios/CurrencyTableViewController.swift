@@ -33,6 +33,23 @@ class CurrencyTableViewController: UITableViewController {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let scc = segue.destination as? SearchCurrencyController else { return }
+        scc.tableData = Array(convertValues.keys)  // TODO: convert to beautify names
+        scc.senderIndex = (sender as! UIView).superview?.superview?.tag
+    }
+    
+    @IBAction func unwindSegueWithResult(segue: UIStoryboardSegue) {
+        guard let ms = segue.source as? SearchCurrencyController else { return }
+        print("return")
+        print(ms.senderIndex!)
+        print((ms.tableView!.cellForRow(at: ms.tableView.indexPathForSelectedRow!)?.textLabel?.text)!)
+        
+        recalcCell(index: ms.senderIndex!,
+                   newKind: (ms.tableView!.cellForRow(at: ms.tableView.indexPathForSelectedRow!)?.textLabel?.text)!)
+        
+    }
+    
     private func loadDefaults() {
         let url = URL(string: "https://api.exchangeratesapi.io/latest")!
         
@@ -54,18 +71,7 @@ class CurrencyTableViewController: UITableViewController {
         
         items += [Currency(kind: "USD", value: 0.0)]
         items += [Currency(kind: "RUB", value: 0.0)]
-    }
-    
-    @IBAction func chooseCurrency(_ sender: UIButton) {
-        // TODO: add choose
-        let alert = UIAlertController(title: "Alert title", message: "Alert message.", preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
-        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
-        
-        self.present(alert, animated: true)
-    }
-    
+    }    
     
     @IBAction func valueChanged(_ sender: UITextField) {
         // setted in cell creation
@@ -85,6 +91,13 @@ class CurrencyTableViewController: UITableViewController {
             (tableView.visibleCells[row] as! CurrencyTableViewCell)
                 .value = items[row].value
         }
+    }
+    
+    func recalcCell(index: Int, newKind: String) {
+        items[index].value = items[index].value / convertValues[items[index].kind]! * convertValues[newKind]!
+        items[index].kind = newKind
+        
+        tableView.reloadData()
     }
 }
 extension String {

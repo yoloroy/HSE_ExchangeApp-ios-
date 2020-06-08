@@ -9,4 +9,5 @@ class ViewController: UIViewController {
 
 
 }
+extension CurrencyTableViewController {}
 
