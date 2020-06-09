@@ -46,19 +46,6 @@
                                                 <action selector="addRow:" destination="j66-0V-b5g" eventType="touchUpInside" id="Skg-FJ-xWo"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ia-YV-whX">
-                                            <rect key="frame" x="372" y="10" width="24" height="24"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="22" id="BkH-f8-jNY"/>
-                                                <constraint firstAttribute="width" constant="22" id="mZT-jC-MYg"/>
-                                            </constraints>
-                                            <state key="normal" title="Button" image="trash.fill" catalog="system">
-                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="delRow:" destination="j66-0V-b5g" eventType="touchUpInside" id="dKo-2S-d4E"/>
-                                            </connections>
-                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVk-EK-4QX">
                                             <rect key="frame" x="20" y="11" width="107" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -75,10 +62,8 @@
                                         <constraint firstItem="QAM-56-02m" firstAttribute="trailing" secondItem="BQA-7D-vj9" secondAttribute="trailingMargin" id="8iS-4f-Qoo"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="mfS-GW-3U2" secondAttribute="bottom" constant="3" id="Rry-tw-bHu"/>
                                         <constraint firstItem="QAM-56-02m" firstAttribute="leading" secondItem="mfS-GW-3U2" secondAttribute="trailing" constant="13" id="ZHf-Tc-ZVt"/>
-                                        <constraint firstAttribute="trailing" secondItem="2ia-YV-whX" secondAttribute="trailing" constant="20" id="kB6-qd-NoJ"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="QAM-56-02m" secondAttribute="bottom" constant="10" id="mab-cF-Wkv"/>
                                         <constraint firstItem="mfS-GW-3U2" firstAttribute="leading" secondItem="BQA-7D-vj9" secondAttribute="leadingMargin" id="yMF-XI-qt8"/>
-                                        <constraint firstItem="2ia-YV-whX" firstAttribute="top" secondItem="BQA-7D-vj9" secondAttribute="top" constant="10" id="zwg-gb-wIB"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -135,6 +120,5 @@
     <resources>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
-        <image name="trash.fill" catalog="system" width="121" height="128"/>
     </resources>
 </document>

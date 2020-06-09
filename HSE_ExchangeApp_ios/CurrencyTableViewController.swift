@@ -147,15 +147,6 @@ class CurrencyTableViewController: UITableViewController {
         }
     }
     
-    @IBAction func delRow(_ sender: UIButton) {
-        tableView(tableView,
-                  commit: .delete,
-                  forRowAt: IndexPath.init(
-                    row: sender.row,
-                    section: 0)
-        )
-    }
-    
     func recalcCell(index: Int, newKind: String) {
         items[index].value = calcValueForKind(
             from: items[index],
