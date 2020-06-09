@@ -47,7 +47,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVk-EK-4QX">
-                                            <rect key="frame" x="20" y="11" width="107" height="18"/>
+                                            <rect key="frame" x="20" y="11" width="339" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                             <state key="normal" title="$ USD Dollar" image="pencil" catalog="system">

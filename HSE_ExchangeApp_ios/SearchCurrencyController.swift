@@ -3,6 +3,17 @@ import UIKit
 class SearchCurrencyController: UITableViewController, UISearchResultsUpdating {
     var tableData = ["something1", "something2"]
     var filteredTableData = [String]()
+    
+    var items: [String] {
+        get {
+            if  (resultSearchController.isActive) {
+                return filteredTableData
+            } else {
+                return tableData
+            }
+        }
+    }
+    
     var resultSearchController = UISearchController()
     
     var senderIndex: Int?
@@ -34,27 +45,17 @@ class SearchCurrencyController: UITableViewController, UISearchResultsUpdating {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       // 2
       // return the number of rows
-      if  (resultSearchController.isActive) {
-          return filteredTableData.count
-      } else {
-          return tableData.count
-      }
+        return items.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       // 3
       let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
-      if (resultSearchController.isActive) {
-          cell.textLabel?.text = filteredTableData[indexPath.row]
-
-          return cell
-      }
-      else {
-          cell.textLabel?.text = tableData[indexPath.row]
+      cell.tag = indexPath.row
+      cell.textLabel?.text = Currency.getKind(kindCode: items[indexPath.row])
         
-          return cell
-      }
+      return cell
     }
     
     func updateSearchResults(for searchController: UISearchController) {

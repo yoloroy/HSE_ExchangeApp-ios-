@@ -72,13 +72,10 @@ class CurrencyTableViewController: UITableViewController {
     
     @IBAction func unwindSegueWithResult(segue: UIStoryboardSegue) {
         guard let ms = segue.source as? SearchCurrencyController else { return }
-        print("return")
-        print(ms.senderIndex!)
-        print((ms.tableView!.cellForRow(at: ms.tableView.indexPathForSelectedRow!)?.textLabel?.text)!)
         
+        // TODO: beautify it and Currency.getKindWithKindName
         recalcCell(index: ms.senderIndex!,
-                   newKind: (ms.tableView!.cellForRow(at: ms.tableView.indexPathForSelectedRow!)?.textLabel?.text)!)
-        
+                   newKind: Currency.getKind(kindName: (ms.tableView!.cellForRow(at: ms.tableView.indexPathForSelectedRow!)?.textLabel?.text)!))
     }
     
     private func loadDefaults() {

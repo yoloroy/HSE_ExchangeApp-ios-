@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   Currencies.plist
+   HSE_ExchangeApp_ios
+
+   Created by Юрий Ларюшкин on 09.06.2020.
+   Copyright (c) 2020 ___ORGANIZATIONNAME___. All rights reserved.
+-->
+<plist version="1.0">
+    <dict>
+    <key>Currencies</key>
+    <dict>
+        <key>INR</key><string>₹ Indian Rupee</string>
+        <key>CHF</key><string>CHF Swiss Franc</string>
+        <key>JPY</key><string>¥ Japanese Yen</string>
+        <key>PLN</key><string>PLN Polish Zloty</string>
+        <key>HRK</key><string>HRK Croatian Kuna</string>
+        <key>KRW</key><string>₩ South Korean Won</string>
+        <key>CNY</key><string>CN¥ Chinese Yuan</string>
+        <key>TRY</key><string>TRY Turkish Lira</string>
+        <key>EUR</key><string>€ Euro</string>
+        <key>GBP</key><string>£ British Pound</string>
+        <key>BGN</key><string>BGN Bulgarian Lev</string>
+        <key>DKK</key><string>DKK Danish Krone</string>
+        <key>THB</key><string>THB Thai Baht</string>
+        <key>MXN</key><string>MX$ Mexican Peso</string>
+        <key>PHP</key><string>PHP Philippine Piso</string>
+        <key>ISK</key><string>ISK Icelandic Króna</string>
+        <key>AUD</key><string>A$ Australian Dollar</string>
+        <key>SEK</key><string>SEK Swedish Krona</string>
+        <key>ILS</key><string>₪ Israeli New Shekel</string>
+        <key>IDR</key><string>IDR Indonesian Rupiah</string>
+        <key>NOK</key><string>NOK Norwegian Krone</string>
+        <key>RUB</key><string>₽ Russian Ruble</string>
+        <key>HUF</key><string>HUF Hungarian Forint</string>
+        <key>CZK</key><string>CZK Czech Koruna</string>
+        <key>ZAR</key><string>ZAR South African Rand</string>
+        <key>SGD</key><string>SGD Singapore Dollar</string>
+        <key>BRL</key><string>R$ Brazilian Real</string>
+        <key>USD</key><string>$ US Dollar</string>
+        <key>RON</key><string>RON Romanian Leu</string>
+        <key>MYR</key><string>MYR Malaysian Ringgit</string>
+        <key>CAD</key><string>CA$ Canadian Dollar</string>
+        <key>NZD</key><string>NZ$ New Zealand Dollar</string>
+        <key>HKD</key><string>HK$ Hong Kong Dollar</string>
+    </dict>
+    </dict>
+</plist>

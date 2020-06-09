@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3330E113248D862900DAD095 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 339AF8D9248D827F004A8389 /* WebKit.framework */; };
 		3330E115248E94B300DAD095 /* SearchCurrencyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330E114248E94B300DAD095 /* SearchCurrencyController.swift */; };
+		3330E119248F9D8A00DAD095 /* Currencies.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3330E118248F9D8A00DAD095 /* Currencies.plist */; };
 		3335D87A248C300C0015C492 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335D879248C300C0015C492 /* AppDelegate.swift */; };
 		3335D87C248C300C0015C492 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335D87B248C300C0015C492 /* SceneDelegate.swift */; };
 		3335D87E248C300C0015C492 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335D87D248C300C0015C492 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		3330E114248E94B300DAD095 /* SearchCurrencyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCurrencyController.swift; sourceTree = "<group>"; };
+		3330E118248F9D8A00DAD095 /* Currencies.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Currencies.plist; sourceTree = "<group>"; };
 		3335D876248C300C0015C492 /* HSE_ExchangeApp_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSE_ExchangeApp_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3335D879248C300C0015C492 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3335D87B248C300C0015C492 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				3335D887248C30120015C492 /* Info.plist */,
 				3335D891248C476F0015C492 /* Currency.swift */,
 				3330E114248E94B300DAD095 /* SearchCurrencyController.swift */,
+				3330E118248F9D8A00DAD095 /* Currencies.plist */,
 			);
 			path = HSE_ExchangeApp_ios;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3330E119248F9D8A00DAD095 /* Currencies.plist in Resources */,
 				3335D886248C30120015C492 /* LaunchScreen.storyboard in Resources */,
 				3335D883248C30120015C492 /* Assets.xcassets in Resources */,
 				3335D881248C300C0015C492 /* Main.storyboard in Resources */,
