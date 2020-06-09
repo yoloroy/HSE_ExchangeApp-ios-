@@ -19,6 +19,11 @@
 ![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/search1.png)
 ![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/search2.png)
 
+## Планы
+- Вынести "+" в верхний правый угол (или в toolbar снизу) и добавить drag and drop
+- Добавить выбор даты
+- Добавить сохранение значений на случай отсутствия интернета
+
 <br><br><br>
 ## Мои контакты
 Если будут вопросы по проекту, то вот как со мной связаться: 
