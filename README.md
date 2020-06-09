@@ -1,6 +1,6 @@
 # HSE_ExchangeApp (ios)
-🎉 На данный момент выполнено <b>2</b> из <b>4</b>х этапов
-[📄 Ссылка на само задание ⬀](https://cs.hse.ru/mobile/2020/android)
+🎉 На данный момент выполнено <b>4</b><sub>(осталось оформление названий)</sub> из <b>4</b>х этапов
+<br>[📄 Ссылка на само задание ⬀](https://cs.hse.ru/mobile/2020/android)
 
 ## Как запустить проект?
   1. Вам понадобится Xcode, который вы можете скачать на свой mac в App Store
@@ -12,8 +12,10 @@
 - Есть тёмная тема
 
 ## Скриншоты работы приложения
-![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202020-06-07%20at%2014.21.28.png)
-![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202020-06-07%20at%2018.25.01.png)
+![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/main1.png)
+![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/main2.png)
+![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/search1.png)
+![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/search2.png)
 
 <br><br><br>
 ## Мои контакты
