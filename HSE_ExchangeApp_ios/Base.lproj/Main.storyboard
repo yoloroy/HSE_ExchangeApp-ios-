@@ -22,8 +22,45 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Value" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mfS-GW-3U2">
+                                            <rect key="frame" x="20" y="42" width="339" height="34"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="34" id="WuY-ug-R3n"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            <connections>
+                                                <action selector="valueChanged:" destination="j66-0V-b5g" eventType="editingChanged" id="6D9-hs-64C"/>
+                                            </connections>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAM-56-02m">
+                                            <rect key="frame" x="372" y="47" width="22" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="22" id="LLD-28-dvO"/>
+                                                <constraint firstAttribute="height" constant="22" id="qSR-k5-fuY"/>
+                                            </constraints>
+                                            <state key="normal" image="plus.circle" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="addRow:" destination="j66-0V-b5g" eventType="touchUpInside" id="Skg-FJ-xWo"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ia-YV-whX">
+                                            <rect key="frame" x="372" y="10" width="24" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="22" id="BkH-f8-jNY"/>
+                                                <constraint firstAttribute="width" constant="22" id="mZT-jC-MYg"/>
+                                            </constraints>
+                                            <state key="normal" title="Button" image="trash.fill" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="delRow:" destination="j66-0V-b5g" eventType="touchUpInside" id="dKo-2S-d4E"/>
+                                            </connections>
+                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVk-EK-4QX">
-                                            <rect key="frame" x="20" y="10" width="107" height="18"/>
+                                            <rect key="frame" x="20" y="11" width="107" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                             <state key="normal" title="$ USD Dollar" image="pencil" catalog="system">
@@ -33,16 +70,16 @@
                                                 <segue destination="6qL-Fa-SfY" kind="show" id="JEP-bd-n3H"/>
                                             </connections>
                                         </button>
-                                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Value" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mfS-GW-3U2">
-                                            <rect key="frame" x="20" y="36" width="339" height="34"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                            <connections>
-                                                <action selector="valueChanged:" destination="j66-0V-b5g" eventType="editingChanged" id="6D9-hs-64C"/>
-                                            </connections>
-                                        </textField>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="QAM-56-02m" firstAttribute="trailing" secondItem="BQA-7D-vj9" secondAttribute="trailingMargin" id="8iS-4f-Qoo"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="mfS-GW-3U2" secondAttribute="bottom" constant="3" id="Rry-tw-bHu"/>
+                                        <constraint firstItem="QAM-56-02m" firstAttribute="leading" secondItem="mfS-GW-3U2" secondAttribute="trailing" constant="13" id="ZHf-Tc-ZVt"/>
+                                        <constraint firstAttribute="trailing" secondItem="2ia-YV-whX" secondAttribute="trailing" constant="20" id="kB6-qd-NoJ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="QAM-56-02m" secondAttribute="bottom" constant="10" id="mab-cF-Wkv"/>
+                                        <constraint firstItem="mfS-GW-3U2" firstAttribute="leading" secondItem="BQA-7D-vj9" secondAttribute="leadingMargin" id="yMF-XI-qt8"/>
+                                        <constraint firstItem="2ia-YV-whX" firstAttribute="top" secondItem="BQA-7D-vj9" secondAttribute="top" constant="10" id="zwg-gb-wIB"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="currencyChooser" destination="OVk-EK-4QX" id="fnI-RZ-FGw"/>
@@ -59,7 +96,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RX5-c7-mEk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="109" y="170"/>
+            <point key="canvasLocation" x="108.69565217391305" y="169.41964285714286"/>
         </scene>
         <!--Search Currency Controller-->
         <scene sceneID="aUh-mw-xjl">
@@ -97,5 +134,7 @@
     </scenes>
     <resources>
         <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="plus.circle" catalog="system" width="128" height="121"/>
+        <image name="trash.fill" catalog="system" width="121" height="128"/>
     </resources>
 </document>

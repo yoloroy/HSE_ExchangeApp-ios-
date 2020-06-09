@@ -1,8 +1,18 @@
 import UIKit
 
 class CurrencyTableViewController: UITableViewController {
+    // current viewed cells data
     var items = [Currency]()
+    
     var convertValues: [String: Double] = [:]
+    
+    var usedKinds: [String] {
+        get { items.map { $0.kind } }
+    }
+    
+    var unusedKinds: [String] {
+        get { convertValues.keys.filter({ !usedKinds.contains($0) }) }
+    }
     
     
     override func viewDidLoad() {
@@ -33,10 +43,31 @@ class CurrencyTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            if items.count < 2 { return }
+            
+            items.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            tableView.reloadData()
+        } else if editingStyle == .insert {
+            tableView.insertRows(
+                at: [indexPath], with: .automatic)
+            
+            tableView.reloadData()
+        } else {
+            super.tableView(tableView, commit: editingStyle, forRowAt: indexPath)
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let scc = segue.destination as? SearchCurrencyController else { return }
-        scc.tableData = Array(convertValues.keys)  // TODO: convert to beautify names
-        scc.senderIndex = (sender as! UIView).superview?.superview?.tag
+        
+        if let senderIndex = (sender as! UIView).superview?.superview?.tag {
+            scc.senderIndex = senderIndex
+            scc.tableData = unusedKinds + [items[senderIndex].kind]  // TODO: convert to beautify names
+        }
     }
     
     @IBAction func unwindSegueWithResult(segue: UIStoryboardSegue) {
@@ -74,18 +105,20 @@ class CurrencyTableViewController: UITableViewController {
     }    
     
     @IBAction func valueChanged(_ sender: UITextField) {
-        // setted in cell creation
         let senderCell = sender.superview?.superview as! CurrencyTableViewCell
-        let senderRow = senderCell.tag
+        let senderRow = senderCell.tag  // setted in cell creation
         
         items[senderRow].value = sender.text!.toDouble()
         
-        for row in 0...items.count-1 {
+        for row in 0..<items.count {
             // for saving selection
             if row == senderRow {continue}
             
             // calculate value from rates
-            items[row].value = items[senderRow].value / convertValues[items[senderRow].kind]! * convertValues[items[row].kind]!
+            items[row].value = calcValueForKind(
+                from: items[senderRow],
+                toKind: items[row].kind
+            )
             
             // view values
             (tableView.visibleCells[row] as! CurrencyTableViewCell)
@@ -93,12 +126,53 @@ class CurrencyTableViewController: UITableViewController {
         }
     }
     
+    @IBAction func addRow(_ sender: UIButton) {
+        if unusedKinds.count > 0 {
+            items.insert(
+                Currency(
+                    kind: unusedKinds[0],
+                    value: calcValueForKind(
+                        from: items[sender.row],
+                        toKind: unusedKinds[0]
+                    )
+                ),
+                at: sender.row+1
+            )
+            
+            tableView(tableView,
+                       commit: .insert,
+                       forRowAt:IndexPath.init(
+                        row: sender.row,
+                        section: 0))
+        }
+    }
+    
+    @IBAction func delRow(_ sender: UIButton) {
+        tableView(tableView,
+                  commit: .delete,
+                  forRowAt: IndexPath.init(
+                    row: sender.row,
+                    section: 0)
+        )
+    }
+    
     func recalcCell(index: Int, newKind: String) {
-        items[index].value = items[index].value / convertValues[items[index].kind]! * convertValues[newKind]!
+        items[index].value = calcValueForKind(
+            from: items[index],
+            toKind: newKind
+        )
         items[index].kind = newKind
         
         tableView.reloadData()
     }
+    
+    func calcValueForKind(from: Currency, toKind: String) -> Double {
+        return
+            from.value
+                / convertValues[from.kind]!  // clear from kind
+                * convertValues[toKind]!  // convert to kind
+    }
+    
 }
 extension String {
     func toDouble() -> Double{
@@ -111,5 +185,13 @@ extension Dictionary {
             left[k] = v
         }
         return left
+    }
+}
+extension UIButton {
+    var row: Int {
+        get {
+            /// Button -> Content View -> Cell -> tag (row)
+            (superview?.superview!.tag)!
+        }
     }
 }
