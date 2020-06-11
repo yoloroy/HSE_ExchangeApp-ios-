@@ -14,10 +14,13 @@
 - Есть тёмная тема
 
 ## Скриншоты работы приложения
-![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/main1.png)
-![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/main2.png)
-![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/search1.png)
-![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/search2.png)
+<img align="left" width="47%" src="https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/main1.png" />
+<img align="right" width="47%" src="https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/main2.png" />
+
+<img align="left" width="47%" src="https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/search1.png" />
+<img align="right" width="47%" src="https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/search2.png" />
+
+<br>
 
 ## Планы
 - Вынести "+" в верхний правый угол (или в toolbar снизу) и добавить drag and drop
@@ -25,7 +28,6 @@
 - Добавить сохранение значений на случай отсутствия интернета
 - Добавить локализацию
 
-<br><br><br>
 ## Мои контакты
 Если будут вопросы по проекту, то вот как со мной связаться: 
 - [👥 VK](https://vk.com/slartak)
