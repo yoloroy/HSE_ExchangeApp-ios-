@@ -2,6 +2,8 @@
 🎉 На данный момент выполнено <b>4</b> из <b>4</b>х этапов
 <br>[📄 Ссылка на само задание ⬀](https://cs.hse.ru/mobile/2020/android)
 
+# ![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82%D1%8B/main_landscape.png)
+
 ## Как запустить проект?
   1. Вам понадобится Xcode, который вы можете скачать на свой mac в App Store
   1. После установки нужно склонировать проект в удобное для Вас место коман дой `git clone https://github.com/yoloroy/HSE_ExchangeApp.git` (или просто скачать архивом и распаковать)
@@ -9,16 +11,14 @@
 
 ## Фичи
 - Перевод производится в runtime
-- Можно увеличивать количество валют для перевода
-- Удаление валют производится свайпом влево
 - Поддерживается тёмная тема
+![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82%D1%8B/dark%2Bruntime.gif)
 
-## Скриншоты работы приложения
-<img align="left" width="47%" src="https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/main1.png" />
-<img align="right" width="47%" src="https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/main2.png" />
+- Можно увеличивать количество валют для перевода
+![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82%D1%8B/add.gif)
 
-<img align="left" width="47%" src="https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/search1.png" />
-<img align="right" width="47%" src="https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/search2.png" />
+- Удаление валют производится свайпом влево
+![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82%D1%8B/delete.gif)
 
 <br>
 
