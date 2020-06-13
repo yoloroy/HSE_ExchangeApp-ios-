@@ -14,11 +14,15 @@
 - Поддерживается тёмная тема
 ![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82%D1%8B/dark%2Bruntime.gif)
 
+- Удаление валют производится свайпом влево
+![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82%D1%8B/delete.gif)
+
 - Можно увеличивать количество валют для перевода
 ![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82%D1%8B/add.gif)
 
-- Удаление валют производится свайпом влево
-![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82%D1%8B/delete.gif)
+- Есть возможность сменить валюту
+- В выборе валюты есть поиск <br>
+![](https://github.com/yoloroy/HSE_ExchangeApp-ios-/blob/master/Скриншоты/choose%20and%20search.gif)
 
 <br>
 
