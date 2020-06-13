@@ -118,7 +118,7 @@ class CurrencyTableViewController: UITableViewController {
             )
             
             // view values
-            (tableView.visibleCells[row] as! CurrencyTableViewCell)
+            (tableView.cellForRow(at: IndexPath(row: row, section:0)) as? CurrencyTableViewCell)?
                 .value = items[row].value
         }
     }
